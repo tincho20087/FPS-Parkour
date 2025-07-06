@@ -15,11 +15,11 @@ public class MercanciaScript : MonoBehaviour
         moneyManager = FindObjectOfType<MoneyManager>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "player")
+        if (collision.gameObject.name == "Player")
         {
-            //actualizar dinero por compra
+            // Actualizar dinero por la compra
             moneyManager.UpdateMoney(-cost);
             Destroy(gameObject);
         }
